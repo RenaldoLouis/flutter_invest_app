@@ -52,36 +52,50 @@ class SignInPage extends StatelessWidget {
           ),
           SizedBox(height: 8.0),
           Container(
-              width: 100,
-              height: 100,
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [
-                        Color(0xFF0C55ED),
-                        Color(0xFFEFAFD5),
-                      ]),
-                  borderRadius: BorderRadius.all((Radius.circular(20)))),
-              child: Align(
-                alignment: Alignment(0, 0),
-                child: Text("asd"),
-              )),
-          // SizedBox(
-          //   // width: 100.0,
-          //   height: 30,
-          //   child: Text(
-          //     "testing",
-          //     style: TextStyle(fontSize: 14, backgroundColor: Colors.amber),
-          //     textAlign: TextAlign.right,
-          //   ),
-          // ),
-          // Container(
-          //   color: Colors.green,
-          //   child: SizedBox(
-          //     height: 100,
-          //   ),
-          // ),
+            width: 100,
+            height: 100,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Color(0xFF0C55ED),
+                    Color(0xFFEFAFD5),
+                  ]),
+              borderRadius: BorderRadius.all(
+                (Radius.circular(20)),
+              ),
+            ),
+            child: Container(
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.only(top: 10.0, bottom: 10.0),
+                    child: Align(
+                      alignment: Alignment(1, 1),
+                      child: Text(
+                        "Name : Sam Cromer",
+                        style: TextStyle(
+                            color: Colors.white70,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 19.0),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10.0, bottom: 10.0),
+                    child: Text(
+                      "Sex : Male",
+                      style: TextStyle(
+                          color: Colors.white70,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 19.0),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
           SizedBox(height: 8.0),
           Container(
             color: Colors.red,
