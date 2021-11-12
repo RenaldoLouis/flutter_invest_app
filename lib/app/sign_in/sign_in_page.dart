@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class SignInPage extends StatelessWidget {
+  final List<String> imageList = [
+    "https://www.setaswall.com/wp-content/uploads/2018/08/Spiderman-Wallpaper-76-1280x720.jpg",
+    "https://images.hdqwalls.com/download/spiderman-peter-parker-standing-on-a-rooftop-ix-1280x720.jpg",
+    "https://images.wallpapersden.com/image/download/peter-parker-spider-man-homecoming_bGhsa22UmZqaraWkpJRmZ21lrWxnZQ.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvUgui-suS8DgaljlONNuhy4vPUsC_UKvxJQ&usqp=CAU",
+  ];
+
   // const SignInPage({ Key? key }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -22,29 +30,38 @@ class SignInPage extends StatelessWidget {
       color: Color(0xFF252934),
       padding: EdgeInsets.only(left: 16, right: 16),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Align(
-            alignment: Alignment(-1, -1),
-            child: Text(
-              "Halo, ",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Color(0xFFC4C4C4),
-                fontSize: 14,
-              ),
+          Container(
+            margin: EdgeInsets.only(top: 25.0),
+            child: Column(
+              children: <Widget>[
+                Align(
+                  alignment: Alignment(-1, -1),
+                  child: Text(
+                    "Halo, ",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFFC4C4C4),
+                      fontSize: 14,
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment(-1, -1),
+                  child: Text(
+                    "Sutisna!",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFFA273E0),
+                      fontSize: 28,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
-          Text(
-            "Sutisna!",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Color(0xFFA273E0),
-              fontSize: 28,
-            ),
-          ),
-          SizedBox(height: 8.0),
           Container(
             width: 100,
             height: 132,
@@ -158,14 +175,39 @@ class SignInPage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 8.0),
+          Text(
+            "Menabung Untuk",
+            style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 14.0),
+          ),
           Container(
-            color: Colors.red,
-            child: SizedBox(
-              height: 300,
+            // color: Colors.red,
+            child: CarouselSlider(
+              options: CarouselOptions(
+                enlargeCenterPage: true,
+                enableInfiniteScroll: true,
+                autoPlay: true,
+              ),
+              items: imageList
+                  .map((e) => ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: Stack(
+                          fit: StackFit.expand,
+                          children: <Widget>[
+                            Image.network(
+                              e,
+                              width: 1050,
+                              height: 350,
+                              fit: BoxFit.cover,
+                            )
+                          ],
+                        ),
+                      ))
+                  .toList(),
             ),
           ),
-          SizedBox(height: 8.0),
           Container(
             color: Colors.purple,
             child: SizedBox(
