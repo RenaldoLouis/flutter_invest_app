@@ -37,23 +37,17 @@ class SignInPage extends StatelessWidget {
             ),
           ),
           Text(
-            "Sutisna",
+            "Sutisna!",
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Color(0xFFA273E0),
               fontSize: 28,
             ),
           ),
-          Text(
-            "Total Investasi",
-            style: TextStyle(
-              color: Color(0xFFDADADA),
-            ),
-          ),
           SizedBox(height: 8.0),
           Container(
             width: 100,
-            height: 100,
+            height: 132,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
@@ -70,26 +64,72 @@ class SignInPage extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.only(top: 10.0, bottom: 10.0),
+                    margin: EdgeInsets.only(top: 20.0, left: 15.0, right: 10.0),
                     child: Align(
-                      alignment: Alignment(1, 1),
+                      alignment: Alignment(-1, 1),
                       child: Text(
-                        "Name : Sam Cromer",
+                        "Total Investasi",
                         style: TextStyle(
                             color: Colors.white70,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 19.0),
+                            // fontWeight: FontWeight.bold,
+                            fontSize: 14.0),
                       ),
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 10.0, bottom: 10.0),
-                    child: Text(
-                      "Sex : Male",
-                      style: TextStyle(
-                          color: Colors.white70,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 19.0),
+                    margin: EdgeInsets.only(top: 3.0, left: 15.0, right: 10.0),
+                    child: Align(
+                      alignment: Alignment(-1, 1),
+                      child: Text(
+                        "RP 42.375.000",
+                        style: TextStyle(
+                            color: Colors.white70,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 24.0),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    // width: 300,
+                    margin: EdgeInsets.only(top: 10.0, left: 15.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        Align(
+                          alignment: Alignment(-1, 1),
+                          child: Text(
+                            "Total Keuntungan",
+                            style: TextStyle(
+                                color: Colors.white70,
+                                // fontWeight: FontWeight.bold,
+                                fontSize: 14.0),
+                          ),
+                        ),
+                        SizedBox(width: 15.0),
+                        Align(
+                          alignment: Alignment(1, 0),
+                          child: Text(
+                            "Persentase Keuntungan",
+                            style: TextStyle(
+                                color: Colors.white70,
+                                // fontWeight: FontWeight.bold,
+                                fontSize: 14.0),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 3.0, left: 15.0, right: 10.0),
+                    child: Align(
+                      alignment: Alignment(-1, 1),
+                      child: Text(
+                        "RP 3.375.000",
+                        style: TextStyle(
+                            color: Colors.white70,
+                            fontWeight: FontWeight.w800,
+                            fontSize: 14.0),
+                      ),
                     ),
                   ),
                 ],
