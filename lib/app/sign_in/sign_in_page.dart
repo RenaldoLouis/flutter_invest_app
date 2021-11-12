@@ -64,18 +64,31 @@ class SignInPage extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.only(top: 20.0, left: 15.0, right: 10.0),
-                    child: Align(
-                      alignment: Alignment(-1, 1),
-                      child: Text(
-                        "Total Investasi",
-                        style: TextStyle(
-                            color: Colors.white70,
-                            // fontWeight: FontWeight.bold,
-                            fontSize: 14.0),
-                      ),
-                    ),
-                  ),
+                      margin:
+                          EdgeInsets.only(top: 20.0, left: 15.0, right: 10.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Align(
+                            child: Text(
+                              "Total Investasi",
+                              style: TextStyle(
+                                  color: Colors.white70,
+                                  // fontWeight: FontWeight.bold,
+                                  fontSize: 14.0),
+                            ),
+                          ),
+                          Align(
+                            child: Text(
+                              "Transaksi >",
+                              style: TextStyle(
+                                  color: Colors.white70,
+                                  // fontWeight: FontWeight.bold,
+                                  fontSize: 12.0),
+                            ),
+                          ),
+                        ],
+                      )),
                   Container(
                     margin: EdgeInsets.only(top: 3.0, left: 15.0, right: 10.0),
                     child: Align(
@@ -90,13 +103,11 @@ class SignInPage extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    // width: 300,
-                    margin: EdgeInsets.only(top: 10.0, left: 15.0),
+                    margin: EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                         Align(
-                          alignment: Alignment(-1, 1),
                           child: Text(
                             "Total Keuntungan",
                             style: TextStyle(
@@ -105,9 +116,7 @@ class SignInPage extends StatelessWidget {
                                 fontSize: 14.0),
                           ),
                         ),
-                        SizedBox(width: 15.0),
                         Align(
-                          alignment: Alignment(1, 0),
                           child: Text(
                             "Persentase Keuntungan",
                             style: TextStyle(
@@ -121,15 +130,28 @@ class SignInPage extends StatelessWidget {
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 3.0, left: 15.0, right: 10.0),
-                    child: Align(
-                      alignment: Alignment(-1, 1),
-                      child: Text(
-                        "RP 3.375.000",
-                        style: TextStyle(
-                            color: Colors.white70,
-                            fontWeight: FontWeight.w800,
-                            fontSize: 14.0),
-                      ),
+                    child: Row(
+                      children: <Widget>[
+                        Align(
+                          child: Text(
+                            "RP 3.375.000",
+                            style: TextStyle(
+                                color: Colors.white70,
+                                fontWeight: FontWeight.w800,
+                                fontSize: 14.0),
+                          ),
+                        ),
+                        SizedBox(width: 68.5),
+                        Align(
+                          child: Text(
+                            "5,2%",
+                            style: TextStyle(
+                                color: Colors.white70,
+                                fontWeight: FontWeight.w800,
+                                fontSize: 14.0),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
