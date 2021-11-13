@@ -119,7 +119,7 @@ class _SigninPageState extends State<SigninPage> {
                   width: 50,
                   height: 50,
                   decoration: BoxDecoration(
-                    color: Colors.yellow,
+                    color: Color(0xFFFDD36C),
                     borderRadius: BorderRadius.all(
                       Radius.circular(100),
                     ),
@@ -304,6 +304,7 @@ class _SigninPageState extends State<SigninPage> {
                 viewportFraction: 0.5,
                 height: 200.0,
                 autoPlay: true,
+                enableInfiniteScroll: false,
                 autoPlayInterval: Duration(seconds: 3),
                 autoPlayAnimationDuration: Duration(milliseconds: 800),
                 autoPlayCurve: Curves.fastOutSlowIn,
@@ -335,11 +336,156 @@ class _SigninPageState extends State<SigninPage> {
             ),
           ),
           Container(
-            width: 300,
-            height: 150,
-            color: Colors.purple,
-            child: SizedBox(
-              height: 100,
+            margin: EdgeInsets.only(bottom: 15.0),
+            padding: EdgeInsets.only(left: 15.0, top: 15.0),
+            height: 76,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Color(0xFF0C55ED).withOpacity(0.7),
+                  Color(0xFFE19381).withOpacity(0.7),
+                  Color(0xFFCA5D93).withOpacity(0.7),
+                ],
+              ),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Belum Tahu Profil Investasimu?",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14.0),
+                  ),
+                ),
+                SizedBox(
+                  height: 8.0,
+                ),
+                Container(
+                  alignment: Alignment(-1, 0),
+                  width: 158,
+                  height: 26,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20),
+                    ),
+                    color: Colors.transparent,
+                    border: Border.all(color: Colors.white),
+                  ),
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Pelajari Lebih Lanjut >",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14.0),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(left: 16, right: 16),
+            child: Column(
+              children: <Widget>[
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Pilihan Produk",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14.0),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Container(
+                      width: 69,
+                      height: 69,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                        color: Colors.red,
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text("asd"),
+                    )
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    Container(
+                      width: 69,
+                      height: 69,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                        color: Colors.red,
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text("asd"),
+                    )
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    Container(
+                      width: 69,
+                      height: 69,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                        color: Colors.red,
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text("asd"),
+                    )
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    Container(
+                      width: 69,
+                      height: 69,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                        color: Colors.red,
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text("asd"),
+                    )
+                  ],
+                ),
+              ],
             ),
           )
         ],
