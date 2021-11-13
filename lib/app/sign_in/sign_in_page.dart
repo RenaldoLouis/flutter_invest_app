@@ -57,17 +57,17 @@ class _SigninPageState extends State<SigninPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
-            label: 'Business',
+            label: 'Portofolio',
             // backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
-            label: 'School',
+            label: 'Favorite',
             // backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.access_alarm),
-            label: "asd",
+            label: "Prpfile",
             //  backgroundColor: Colors.red,
           ),
         ],
@@ -78,189 +78,202 @@ class _SigninPageState extends State<SigninPage> {
   Container _buildContent() {
     return Container(
       color: Color(0xFF252934),
-      padding: EdgeInsets.only(left: 16, right: 16, top: 35),
+      // padding: EdgeInsets.only(left: 16, right: 16, top: 35),
       child: Column(
         // mainAxisAlignment: MainAxisAlignment.start,
         // crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                margin: EdgeInsets.only(top: 25.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      "Halo,",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFFC4C4C4),
-                        fontSize: 14,
-                      ),
-                    ),
-                    Align(
-                      child: Text(
-                        "Sutisna!",
+          Container(
+            padding: EdgeInsets.only(left: 16, right: 16, top: 35),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  margin: EdgeInsets.only(top: 25.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        "Halo,",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Color(0xFFA273E0),
-                          fontSize: 28,
+                          color: Color(0xFFC4C4C4),
+                          fontSize: 14,
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 25.0),
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  color: Colors.yellow,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(100),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          Row(children: [
-            Expanded(
-              child: Container(
-                margin: EdgeInsets.symmetric(vertical: 20),
-                width: 100,
-                height: 132,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [
-                        Color(0xFF0C55ED),
-                        Color(0xFFEFAFD5),
-                      ]),
-                  borderRadius: BorderRadius.all(
-                    (Radius.circular(20)),
-                  ),
-                ),
-                child: Container(
-                  child: Column(
-                    children: <Widget>[
-                      Container(
-                          margin: EdgeInsets.only(
-                              top: 20.0, left: 15.0, right: 10.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Align(
-                                child: Text(
-                                  "Total Investasi",
-                                  style: TextStyle(
-                                      color: Colors.white70,
-                                      // fontWeight: FontWeight.bold,
-                                      fontSize: 14.0),
-                                ),
-                              ),
-                              Align(
-                                child: Text(
-                                  "Transaksi >",
-                                  style: TextStyle(
-                                      color: Colors.white70,
-                                      // fontWeight: FontWeight.bold,
-                                      fontSize: 12.0),
-                                ),
-                              ),
-                            ],
-                          )),
-                      Container(
-                        margin:
-                            EdgeInsets.only(top: 3.0, left: 15.0, right: 10.0),
-                        child: Align(
-                          alignment: Alignment(-1, 1),
-                          child: Text(
-                            "RP 42.375.000",
-                            style: TextStyle(
-                                color: Colors.white70,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 24.0),
+                      Align(
+                        child: Text(
+                          "Sutisna!",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFFA273E0),
+                            fontSize: 28,
                           ),
-                        ),
-                      ),
-                      Container(
-                        margin:
-                            EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Align(
-                              child: Text(
-                                "Total Keuntungan",
-                                style: TextStyle(
-                                    color: Colors.white70,
-                                    // fontWeight: FontWeight.bold,
-                                    fontSize: 14.0),
-                              ),
-                            ),
-                            Align(
-                              child: Text(
-                                "Persentase Keuntungan",
-                                style: TextStyle(
-                                    color: Colors.white70,
-                                    // fontWeight: FontWeight.bold,
-                                    fontSize: 14.0),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        margin:
-                            EdgeInsets.only(top: 3.0, left: 15.0, right: 10.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: <Widget>[
-                            Container(
-                              margin: EdgeInsets.only(right: 95.0),
-                              child: Align(
-                                child: Text(
-                                  "RP 3.375.000",
-                                  style: TextStyle(
-                                      color: Colors.white70,
-                                      fontWeight: FontWeight.w800,
-                                      fontSize: 14.0),
-                                ),
-                              ),
-                            ),
-                            Align(
-                              alignment: Alignment(1, 0.5),
-                              child: Text(
-                                "5,2%",
-                                style: TextStyle(
-                                    color: Colors.white70,
-                                    fontWeight: FontWeight.w800,
-                                    fontSize: 14.0),
-                              ),
-                            ),
-                          ],
                         ),
                       ),
                     ],
                   ),
                 ),
-              ),
-            ),
-          ]),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Menabung Untuk",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 14.0),
+                Container(
+                  margin: EdgeInsets.only(top: 25.0),
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.yellow,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(100),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
           Container(
+            padding: EdgeInsets.only(left: 16, right: 16),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.symmetric(vertical: 20),
+                    width: 100,
+                    height: 132,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [
+                            Color(0xFF0C55ED),
+                            Color(0xFFEFAFD5),
+                          ]),
+                      borderRadius: BorderRadius.all(
+                        (Radius.circular(20)),
+                      ),
+                    ),
+                    child: Container(
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                              margin: EdgeInsets.only(
+                                  top: 20.0, left: 15.0, right: 10.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Align(
+                                    child: Text(
+                                      "Total Investasi",
+                                      style: TextStyle(
+                                          color: Colors.white70,
+                                          // fontWeight: FontWeight.bold,
+                                          fontSize: 14.0),
+                                    ),
+                                  ),
+                                  Align(
+                                    child: Text(
+                                      "Transaksi >",
+                                      style: TextStyle(
+                                          color: Colors.white70,
+                                          // fontWeight: FontWeight.bold,
+                                          fontSize: 12.0),
+                                    ),
+                                  ),
+                                ],
+                              )),
+                          Container(
+                            margin: EdgeInsets.only(
+                                top: 3.0, left: 15.0, right: 10.0),
+                            child: Align(
+                              alignment: Alignment(-1, 1),
+                              child: Text(
+                                "RP 42.375.000",
+                                style: TextStyle(
+                                    color: Colors.white70,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 24.0),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(
+                                top: 10.0, left: 15.0, right: 15.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Align(
+                                  child: Text(
+                                    "Total Keuntungan",
+                                    style: TextStyle(
+                                        color: Colors.white70,
+                                        // fontWeight: FontWeight.bold,
+                                        fontSize: 14.0),
+                                  ),
+                                ),
+                                Align(
+                                  child: Text(
+                                    "Persentase Keuntungan",
+                                    style: TextStyle(
+                                        color: Colors.white70,
+                                        // fontWeight: FontWeight.bold,
+                                        fontSize: 14.0),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(
+                                top: 3.0, left: 15.0, right: 10.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: <Widget>[
+                                Container(
+                                  margin: EdgeInsets.only(right: 95.0),
+                                  child: Align(
+                                    child: Text(
+                                      "RP 3.375.000",
+                                      style: TextStyle(
+                                          color: Colors.white70,
+                                          fontWeight: FontWeight.w800,
+                                          fontSize: 14.0),
+                                    ),
+                                  ),
+                                ),
+                                Align(
+                                  alignment: Alignment(1, 0.5),
+                                  child: Text(
+                                    "5,2%",
+                                    style: TextStyle(
+                                        color: Colors.white70,
+                                        fontWeight: FontWeight.w800,
+                                        fontSize: 14.0),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(left: 16, right: 16),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "Menabung Untuk",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14.0),
+              ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 10),
             // color: Colors.red,
             // child: CarouselSlider(
             //   options: CarouselOptions(
@@ -288,13 +301,14 @@ class _SigninPageState extends State<SigninPage> {
             // ),
             child: CarouselSlider(
               options: CarouselOptions(
+                viewportFraction: 0.5,
                 height: 200.0,
                 autoPlay: true,
                 autoPlayInterval: Duration(seconds: 3),
                 autoPlayAnimationDuration: Duration(milliseconds: 800),
                 autoPlayCurve: Curves.fastOutSlowIn,
                 pauseAutoPlayOnTouch: true,
-                aspectRatio: 2.0,
+                // aspectRatio: 2.0,
                 onPageChanged: (index, reason) {
                   setState(() {
                     _currentIndex = index;
@@ -302,16 +316,21 @@ class _SigninPageState extends State<SigninPage> {
                 },
               ),
               items: cardList.map((card) {
-                return Builder(builder: (BuildContext context) {
-                  return Container(
-                    height: MediaQuery.of(context).size.height * 0.30,
-                    width: MediaQuery.of(context).size.width,
-                    child: Card(
-                      color: Colors.blueAccent,
-                      child: card,
-                    ),
-                  );
-                });
+                return Builder(
+                  builder: (BuildContext context) {
+                    return ClipRRect(
+                      // borderRadius: BorderRadius.circular(10),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.30,
+                        width: MediaQuery.of(context).size.width,
+                        child: Card(
+                          color: Color(0xFF252934),
+                          child: card,
+                        ),
+                      ),
+                    );
+                  },
+                );
               }).toList(),
             ),
           ),

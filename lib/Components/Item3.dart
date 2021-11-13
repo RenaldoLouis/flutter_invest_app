@@ -7,6 +7,7 @@ class Item3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
         gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -24,7 +25,7 @@ class Item3 extends StatelessWidget {
         children: <Widget>[
           Image.asset(
             'assets/flutter_dev.png',
-            height: 180.0,
+            height: 150.0,
             fit: BoxFit.cover,
           )
         ],
