@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:testing_1/Components/Item1.dart';
+import 'package:testing_1/Components/Item2.dart';
+import 'package:testing_1/Components/Item3.dart';
+import 'package:testing_1/Components/Item4.dart';
 
 class SigninPage extends StatefulWidget {
   // const SigninPage({ Key? key }) : super(key: key);
@@ -25,7 +29,7 @@ class _SigninPageState extends State<SigninPage> {
     return result;
   }
 
-  List cardList = ["Item1(), Item2(), Item3(), Item4()"];
+  List cardList = [Item1(), Item2(), Item3(), Item4()];
 
   @override
   Widget build(BuildContext context) {
@@ -213,18 +217,22 @@ class _SigninPageState extends State<SigninPage> {
                         margin:
                             EdgeInsets.only(top: 3.0, left: 15.0, right: 10.0),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
-                            Align(
-                              child: Text(
-                                "RP 3.375.000",
-                                style: TextStyle(
-                                    color: Colors.white70,
-                                    fontWeight: FontWeight.w800,
-                                    fontSize: 14.0),
+                            Container(
+                              margin: EdgeInsets.only(right: 95.0),
+                              child: Align(
+                                child: Text(
+                                  "RP 3.375.000",
+                                  style: TextStyle(
+                                      color: Colors.white70,
+                                      fontWeight: FontWeight.w800,
+                                      fontSize: 14.0),
+                                ),
                               ),
                             ),
-                            SizedBox(width: 68.5),
                             Align(
+                              alignment: Alignment(1, 0.5),
                               child: Text(
                                 "5,2%",
                                 style: TextStyle(
@@ -254,58 +262,58 @@ class _SigninPageState extends State<SigninPage> {
           ),
           Container(
             // color: Colors.red,
-            child: CarouselSlider(
-              options: CarouselOptions(
-                enlargeCenterPage: true,
-                enableInfiniteScroll: true,
-                autoPlay: true,
-                viewportFraction: 0.8,
-                // scrollPhysics: ClampingScrollPhysics(),
-              ),
-              items: imageList
-                  .map((e) => ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: Stack(
-                          fit: StackFit.expand,
-                          children: <Widget>[
-                            Image.network(
-                              e,
-                              height: 350,
-                              fit: BoxFit.cover,
-                            )
-                          ],
-                        ),
-                      ))
-                  .toList(),
-            ),
             // child: CarouselSlider(
             //   options: CarouselOptions(
-            //     height: 200.0,
+            //     enlargeCenterPage: true,
+            //     enableInfiniteScroll: true,
             //     autoPlay: true,
-            //     autoPlayInterval: Duration(seconds: 3),
-            //     autoPlayAnimationDuration: Duration(milliseconds: 800),
-            //     autoPlayCurve: Curves.fastOutSlowIn,
-            //     pauseAutoPlayOnTouch: true,
-            //     aspectRatio: 2.0,
-            //     onPageChanged: (index, reason) {
-            //       setState(() {
-            //         _currentIndex = index;
-            //       });
-            //     },
+            //     viewportFraction: 0.8,
+            //     // scrollPhysics: ClampingScrollPhysics(),
             //   ),
-            //   items: cardList.map((card) {
-            //     return Builder(builder: (BuildContext context) {
-            //       return Container(
-            //         height: MediaQuery.of(context).size.height * 0.30,
-            //         width: MediaQuery.of(context).size.width,
-            //         child: Card(
-            //           color: Colors.blueAccent,
-            //           child: card,
-            //         ),
-            //       );
-            //     });
-            //   }).toList(),
+            //   items: imageList
+            //       .map((e) => ClipRRect(
+            //             borderRadius: BorderRadius.circular(8),
+            //             child: Stack(
+            //               fit: StackFit.expand,
+            //               children: <Widget>[
+            //                 Image.network(
+            //                   e,
+            //                   height: 350,
+            //                   fit: BoxFit.cover,
+            //                 )
+            //               ],
+            //             ),
+            //           ))
+            //       .toList(),
             // ),
+            child: CarouselSlider(
+              options: CarouselOptions(
+                height: 200.0,
+                autoPlay: true,
+                autoPlayInterval: Duration(seconds: 3),
+                autoPlayAnimationDuration: Duration(milliseconds: 800),
+                autoPlayCurve: Curves.fastOutSlowIn,
+                pauseAutoPlayOnTouch: true,
+                aspectRatio: 2.0,
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    _currentIndex = index;
+                  });
+                },
+              ),
+              items: cardList.map((card) {
+                return Builder(builder: (BuildContext context) {
+                  return Container(
+                    height: MediaQuery.of(context).size.height * 0.30,
+                    width: MediaQuery.of(context).size.width,
+                    child: Card(
+                      color: Colors.blueAccent,
+                      child: card,
+                    ),
+                  );
+                });
+              }).toList(),
+            ),
           ),
           Container(
             width: 300,
