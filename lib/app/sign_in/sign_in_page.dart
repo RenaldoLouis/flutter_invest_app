@@ -301,8 +301,8 @@ class _SigninPageState extends State<SigninPage> {
             // ),
             child: CarouselSlider(
               options: CarouselOptions(
-                viewportFraction: 0.5,
-                height: 200.0,
+                viewportFraction: 0.45,
+                height: 190.0,
                 autoPlay: true,
                 enableInfiniteScroll: false,
                 autoPlayInterval: Duration(seconds: 3),
@@ -416,72 +416,96 @@ class _SigninPageState extends State<SigninPage> {
                 Column(
                   children: <Widget>[
                     Container(
+                      margin: EdgeInsets.only(bottom: 7.0),
                       width: 69,
                       height: 69,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(
                           Radius.circular(10),
                         ),
-                        color: Colors.red,
+                        color: Color(0XFFDCF9F7),
                       ),
                     ),
                     Align(
                       alignment: Alignment.center,
-                      child: Text("asd"),
+                      child: Text(
+                        "Reksadana",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
                     )
                   ],
                 ),
                 Column(
                   children: <Widget>[
                     Container(
+                      margin: EdgeInsets.only(bottom: 7.0),
                       width: 69,
                       height: 69,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(
                           Radius.circular(10),
                         ),
-                        color: Colors.red,
+                        color: Color(0xFFCA5D93),
                       ),
                     ),
                     Align(
                       alignment: Alignment.center,
-                      child: Text("asd"),
+                      child: Text(
+                        "Saham",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
                     )
                   ],
                 ),
                 Column(
                   children: <Widget>[
                     Container(
+                      margin: EdgeInsets.only(bottom: 7.0),
                       width: 69,
                       height: 69,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(
                           Radius.circular(10),
                         ),
-                        color: Colors.red,
+                        color: Color(0xFFFB9747),
                       ),
                     ),
                     Align(
                       alignment: Alignment.center,
-                      child: Text("asd"),
+                      child: Text(
+                        "Obligasi",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
                     )
                   ],
                 ),
                 Column(
                   children: <Widget>[
                     Container(
+                      margin: EdgeInsets.only(bottom: 7.0),
                       width: 69,
                       height: 69,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(
                           Radius.circular(10),
                         ),
-                        color: Colors.red,
+                        color: Color(0xFF59C5BB),
                       ),
                     ),
                     Align(
                       alignment: Alignment.center,
-                      child: Text("asd"),
+                      child: Text(
+                        "Asuransi",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
                     )
                   ],
                 ),
