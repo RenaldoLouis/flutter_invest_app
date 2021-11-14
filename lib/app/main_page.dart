@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:testing_1/app/portofolio.dart';
+import 'package:testing_1/app/profile_page.dart';
 
 class mainPage extends StatefulWidget {
   // const mainPage({ Key? key }) : super(key: key);
@@ -8,6 +10,14 @@ class mainPage extends StatefulWidget {
 }
 
 class _mainPageState extends State<mainPage> {
+  int _selectedIndex = 0;
+
+  List<GlobalKey<NavigatorState>> _navigatorKeys = [
+    GlobalKey<NavigatorState>(),
+    GlobalKey<NavigatorState>(),
+    GlobalKey<NavigatorState>()
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,27 +62,27 @@ class _mainPageState extends State<mainPage> {
       ),
       body: Stack(
         children: [
-          // _buildOffstageNavigator(0),
-          // _buildOffstageNavigator(1),
-          // _buildOffstageNavigator(2),
+          _buildOffstageNavigator(0),
+          _buildOffstageNavigator(1),
+          _buildOffstageNavigator(2),
         ],
       ),
     );
   }
 
-  void _next() {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Screen2()));
-  }
+  // void _next() {
+  //   Navigator.push(context, MaterialPageRoute(builder: (context) => Screen2()));
+  // }
 
   Map<String, WidgetBuilder> _routeBuilders(BuildContext context, int index) {
     return {
       '/': (context) {
         return [
-          HomePage(),
-          CalendarPage(
-            onNext: _next,
-          ),
-          ProfilePage(),
+          Portofolio(),
+          // CalendarPage(
+          //   onNext: _next,
+          // ),
+          profilePage(),
         ].elementAt(index);
       },
     };

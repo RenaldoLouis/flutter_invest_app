@@ -11,7 +11,7 @@ class _PortofolioState extends State<Portofolio> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("it Works"),
+      child: Text("Portofolio Page"),
     );
   }
 }
