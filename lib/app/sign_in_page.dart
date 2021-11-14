@@ -48,37 +48,37 @@ class _SigninPageState extends State<SigninPage> {
       //   ),
       // ),
       body: _buildContent(),
-      bottomNavigationBar: BottomNavigationBar(
-        // backgroundColor: Colors.red,
-        // fixedColor: Colors.red,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-              color: Color(0xFF0C55ED),
-            ),
-            label: 'Home',
-            backgroundColor: Colors.black,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.assessment_rounded),
-            label: 'Portofolio',
-            // backgroundColor: Colors.red,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.star),
-            label: 'Favorite',
-            // backgroundColor: Colors.red,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_rounded),
-            label: "Profile",
-            //  backgroundColor: Colors.red,
-          ),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   // backgroundColor: Colors.red,
+      //   // fixedColor: Colors.red,
+      //   showSelectedLabels: true,
+      //   showUnselectedLabels: true,
+      //   items: const <BottomNavigationBarItem>[
+      //     BottomNavigationBarItem(
+      //       icon: Icon(
+      //         Icons.home,
+      //         color: Color(0xFF0C55ED),
+      //       ),
+      //       label: 'Home',
+      //       backgroundColor: Colors.black,
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.assessment_rounded),
+      //       label: 'Portofolio',
+      //       // backgroundColor: Colors.red,
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.star),
+      //       label: 'Favorite',
+      //       // backgroundColor: Colors.red,
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.account_circle_rounded),
+      //       label: "Profile",
+      //       //  backgroundColor: Colors.red,
+      //     ),
+      //   ],
+      // ),
     );
   }
 

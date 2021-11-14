@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testing_1/app/sign_in_page.dart';
 import 'package:testing_1/app/portofolio.dart';
 import 'package:testing_1/app/profile_page.dart';
 
@@ -59,6 +60,11 @@ class _mainPageState extends State<mainPage> {
             //  backgroundColor: Colors.red,
           ),
         ],
+        onTap: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
       ),
       body: Stack(
         children: [
@@ -78,6 +84,7 @@ class _mainPageState extends State<mainPage> {
     return {
       '/': (context) {
         return [
+          SigninPage(),
           Portofolio(),
           // CalendarPage(
           //   onNext: _next,
