@@ -4,6 +4,7 @@ import 'package:testing_1/Components/Item1.dart';
 import 'package:testing_1/Components/Item2.dart';
 import 'package:testing_1/Components/Item3.dart';
 import 'package:testing_1/Components/Item4.dart';
+import 'package:testing_1/app/portofolio.dart';
 
 class SigninPage extends StatefulWidget {
   // const SigninPage({ Key? key }) : super(key: key);
@@ -19,6 +20,10 @@ class _SigninPageState extends State<SigninPage> {
     "https://images.hdqwalls.com/download/spiderman-peter-parker-standing-on-a-rooftop-ix-1280x720.jpg",
     "https://images.wallpapersden.com/image/download/peter-parker-spider-man-homecoming_bGhsa22UmZqaraWkpJRmZ21lrWxnZQ.jpg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvUgui-suS8DgaljlONNuhy4vPUsC_UKvxJQ&usqp=CAU",
+  ];
+
+  List<Widget> _widgetOptions = <Widget>[
+    Portofolio(),
   ];
 
   List<T> map<T>(List list, Function handler) {
@@ -46,28 +51,30 @@ class _SigninPageState extends State<SigninPage> {
       bottomNavigationBar: BottomNavigationBar(
         // backgroundColor: Colors.red,
         // fixedColor: Colors.red,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
-              color: Colors.blue,
+              color: Color(0xFF0C55ED),
             ),
             label: 'Home',
             backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
+            icon: Icon(Icons.assessment_rounded),
             label: 'Portofolio',
             // backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
+            icon: Icon(Icons.star),
             label: 'Favorite',
             // backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.access_alarm),
-            label: "Prpfile",
+            icon: Icon(Icons.account_circle_rounded),
+            label: "Profile",
             //  backgroundColor: Colors.red,
           ),
         ],
