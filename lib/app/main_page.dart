@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:testing_1/app/sign_in_page.dart';
 import 'package:testing_1/app/portofolio.dart';
+import 'package:testing_1/app/favorite_page.dart';
 import 'package:testing_1/app/profile_page.dart';
 
 class mainPage extends StatefulWidget {
@@ -86,6 +87,7 @@ class _mainPageState extends State<mainPage> {
         return [
           SigninPage(),
           Portofolio(),
+          favoritePage(),
           // CalendarPage(
           //   onNext: _next,
           // ),
