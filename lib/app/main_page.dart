@@ -32,7 +32,7 @@ class _mainPageState extends State<mainPage> {
       //   ),
       // ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.red,
+        backgroundColor: Color(0xFF252934),
         // fixedColor: Colors.red,
         showSelectedLabels: true,
         showUnselectedLabels: true,
