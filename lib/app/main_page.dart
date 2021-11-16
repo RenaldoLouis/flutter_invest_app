@@ -13,8 +13,11 @@ class mainPage extends StatefulWidget {
 
 class _mainPageState extends State<mainPage> {
   int _selectedIndex = 0;
+  final navbarButtonColor = Color(0xFF0C55ED);
+  final navbarButtonColorDefault = Colors.black;
 
   List<GlobalKey<NavigatorState>> _navigatorKeys = [
+    GlobalKey<NavigatorState>(),
     GlobalKey<NavigatorState>(),
     GlobalKey<NavigatorState>(),
     GlobalKey<NavigatorState>()
@@ -34,30 +37,47 @@ class _mainPageState extends State<mainPage> {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Color(0xFF252934),
         // fixedColor: Colors.red,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         landscapeLayout: BottomNavigationBarLandscapeLayout.linear,
         type: BottomNavigationBarType.fixed,
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
-              color: Color(0xFF0C55ED),
+              color: _selectedIndex == 0
+                  ? navbarButtonColor
+                  : navbarButtonColorDefault,
             ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.assessment_rounded),
+            icon: Icon(
+              Icons.assessment_rounded,
+              color: _selectedIndex == 1
+                  ? navbarButtonColor
+                  : navbarButtonColorDefault,
+            ),
             label: 'Portofolio',
             // backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star),
+            icon: Icon(
+              Icons.star,
+              color: _selectedIndex == 2
+                  ? navbarButtonColor
+                  : navbarButtonColorDefault,
+            ),
             label: 'Favorite',
             // backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_rounded),
+            icon: Icon(
+              Icons.account_circle_rounded,
+              color: _selectedIndex == 3
+                  ? navbarButtonColor
+                  : navbarButtonColorDefault,
+            ),
             label: "Profile",
             //  backgroundColor: Colors.red,
           ),
@@ -73,6 +93,7 @@ class _mainPageState extends State<mainPage> {
           _buildOffstageNavigator(0),
           _buildOffstageNavigator(1),
           _buildOffstageNavigator(2),
+          _buildOffstageNavigator(3),
         ],
       ),
     );
@@ -89,10 +110,10 @@ class _mainPageState extends State<mainPage> {
           SigninPage(),
           Portofolio(),
           favoritePage(),
+          profilePage(),
           // CalendarPage(
           //   onNext: _next,
           // ),
-          profilePage(),
         ].elementAt(index);
       },
     };

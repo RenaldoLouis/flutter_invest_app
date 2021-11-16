@@ -33,7 +33,7 @@ class _favoritePageState extends State<favoritePage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        "Portofolio Page",
+                        "Favorite Page",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Color(0xFFC4C4C4),

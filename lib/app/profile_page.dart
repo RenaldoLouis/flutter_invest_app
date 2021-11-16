@@ -11,7 +11,18 @@ class _profilePageState extends State<profilePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("Profile page"),
+      child: _profileContent(),
     );
+  }
+}
+
+class _profileContent extends StatelessWidget {
+  // const _profileContent({
+  //   Key key,
+  // }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text("Profile page");
   }
 }
