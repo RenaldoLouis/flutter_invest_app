@@ -32,10 +32,12 @@ class _mainPageState extends State<mainPage> {
       //   ),
       // ),
       bottomNavigationBar: BottomNavigationBar(
-        // backgroundColor: Colors.red,
+        backgroundColor: Colors.red,
         // fixedColor: Colors.red,
         showSelectedLabels: true,
         showUnselectedLabels: true,
+        landscapeLayout: BottomNavigationBarLandscapeLayout.linear,
+        type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
@@ -43,7 +45,6 @@ class _mainPageState extends State<mainPage> {
               color: Color(0xFF0C55ED),
             ),
             label: 'Home',
-            backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.assessment_rounded),

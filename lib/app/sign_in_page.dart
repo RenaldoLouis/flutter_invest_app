@@ -117,59 +117,17 @@ class _SigninPageState extends State<SigninPage> {
                         (Radius.circular(20)),
                       ),
                     ),
-                    child: Container(
-                      child: Column(
-                        children: <Widget>[
-                          Container(
-                              margin: EdgeInsets.only(
-                                  top: 20.0, left: 15.0, right: 10.0),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  Align(
-                                    child: Text(
-                                      "Total Investasi",
-                                      style: TextStyle(
-                                          color: Colors.white70,
-                                          // fontWeight: FontWeight.bold,
-                                          fontSize: 14.0),
-                                    ),
-                                  ),
-                                  Align(
-                                    child: Text(
-                                      "Transaksi >",
-                                      style: TextStyle(
-                                          color: Colors.white70,
-                                          // fontWeight: FontWeight.bold,
-                                          fontSize: 12.0),
-                                    ),
-                                  ),
-                                ],
-                              )),
-                          Container(
+                    child: Column(
+                      children: <Widget>[
+                        Container(
                             margin: EdgeInsets.only(
-                                top: 3.0, left: 15.0, right: 10.0),
-                            child: Align(
-                              alignment: Alignment(-1, 1),
-                              child: Text(
-                                "RP 42.375.000",
-                                style: TextStyle(
-                                    color: Colors.white70,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 24.0),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(
-                                top: 10.0, left: 15.0, right: 15.0),
+                                top: 20.0, left: 15.0, right: 10.0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
                                 Align(
                                   child: Text(
-                                    "Total Keuntungan",
+                                    "Total Investasi",
                                     style: TextStyle(
                                         color: Colors.white70,
                                         // fontWeight: FontWeight.bold,
@@ -178,49 +136,115 @@ class _SigninPageState extends State<SigninPage> {
                                 ),
                                 Align(
                                   child: Text(
-                                    "Persentase Keuntungan",
+                                    "Transaksi >",
                                     style: TextStyle(
                                         color: Colors.white70,
                                         // fontWeight: FontWeight.bold,
-                                        fontSize: 14.0),
+                                        fontSize: 12.0),
                                   ),
                                 ),
                               ],
+                            )),
+                        Container(
+                          margin: EdgeInsets.only(
+                              top: 3.0, left: 15.0, right: 10.0),
+                          child: Align(
+                            alignment: Alignment(-1, 1),
+                            child: Text(
+                              "RP 42.375.000",
+                              style: TextStyle(
+                                  color: Colors.white70,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 24.0),
                             ),
                           ),
-                          Container(
-                            margin: EdgeInsets.only(
-                                top: 3.0, left: 15.0, right: 10.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: <Widget>[
-                                Container(
-                                  margin: EdgeInsets.only(right: 95.0),
-                                  child: Align(
-                                    child: Text(
-                                      "RP 3.375.000",
-                                      style: TextStyle(
-                                          color: Colors.white70,
-                                          fontWeight: FontWeight.w800,
-                                          fontSize: 14.0),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(
+                            top: 10.0,
+                            left: 15.0,
+                            right: 15.0,
+                          ),
+                          child: Row(
+                            children: <Widget>[
+                              Expanded(
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text(
+                                          "Total Keuntungan",
+                                          style: TextStyle(
+                                              color: Colors.white70,
+                                              // fontWeight: FontWeight.bold,
+                                              fontSize: 14.0),
+                                        ),
+                                        Container(
+                                          // margin: EdgeInsets.only(right: 95.0),
+                                          child: Text(
+                                            "RP 3.375.000",
+                                            style: TextStyle(
+                                                color: Colors.white70,
+                                                fontWeight: FontWeight.w800,
+                                                fontSize: 14.0),
+                                          ),
+                                        ),
+                                      ],
                                     ),
-                                  ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text(
+                                          "Persentase Keuntungan",
+                                          style: TextStyle(
+                                              color: Colors.white70,
+                                              // fontWeight: FontWeight.bold,
+                                              fontSize: 14.0),
+                                        ),
+                                        Text(
+                                          "5,2%",
+                                          style: TextStyle(
+                                              color: Colors.white70,
+                                              fontWeight: FontWeight.w800,
+                                              fontSize: 14.0),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
                                 ),
-                                Align(
-                                  alignment: Alignment(1, 0.5),
-                                  child: Text(
-                                    "5,2%",
-                                    style: TextStyle(
-                                        color: Colors.white70,
-                                        fontWeight: FontWeight.w800,
-                                        fontSize: 14.0),
-                                  ),
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
+                        ),
+                        // Container(
+                        //   margin: EdgeInsets.only(
+                        //     top: 10.0,
+                        //     left: 15.0,
+                        //     right: 15.0,
+                        //   ),
+                        //   child: Row(
+                        //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        //     children: <Widget>[
+
+                        //     ],
+                        //   ),
+                        // ),
+                        // Container(
+                        //   margin: EdgeInsets.only(
+                        //       top: 3.0, left: 15.0, right: 10.0),
+                        //   child: Row(
+                        //     mainAxisAlignment: MainAxisAlignment.start,
+                        //     children: <Widget>[
+
+                        //     ],
+                        //   ),
+                        // ),
+                      ],
                     ),
                   ),
                 ),
@@ -336,7 +360,7 @@ class _SigninPageState extends State<SigninPage> {
                 ),
                 Container(
                   alignment: Alignment(-1, 0),
-                  width: 158,
+                  width: 165,
                   height: 26,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(
