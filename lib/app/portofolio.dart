@@ -34,7 +34,7 @@ class _portofolioContent extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 Text(
-                  "Portofolfio!",
+                  "PORTOFOLIO!",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Color(0xFFA273E0),
@@ -55,8 +55,8 @@ class _portofolioContent extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.symmetric(vertical: 20),
-            height: 132,
+            margin: EdgeInsets.symmetric(vertical: 35, horizontal: 85),
+            height: 180,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
@@ -66,8 +66,140 @@ class _portofolioContent extends StatelessWidget {
                     Color(0xFFEFAFD5),
                   ]),
               borderRadius: BorderRadius.all(
-                (Radius.circular(20)),
+                (Radius.circular(100)),
               ),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(bottom: 7.0),
+                      width: 69,
+                      height: 69,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(50),
+                        ),
+                        color: Color(0XFFDCF9F7),
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Reksadana",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(bottom: 7.0),
+                      width: 69,
+                      height: 69,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(50),
+                        ),
+                        color: Color(0xFFCA5D93),
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Saham",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(bottom: 7.0),
+                      width: 69,
+                      height: 69,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(50),
+                        ),
+                        color: Color(0xFFFB9747),
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Obligasi",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(bottom: 7.0),
+                      width: 69,
+                      height: 69,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(50),
+                        ),
+                        color: Color(0xFF59C5BB),
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Asuransi",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 15, bottom: 5),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(
+                  "Pembelian",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 14),
+                ),
+                Row(
+                  children: <Widget>[
+                    Text(
+                      "Lihat Semua",
+                      style: TextStyle(color: Color(0XFFC4C4C4), fontSize: 12),
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios_rounded,
+                      color: Color(0XFFC4C4C4),
+                      size: 15,
+                    )
+                  ],
+                )
+              ],
             ),
           )
         ],

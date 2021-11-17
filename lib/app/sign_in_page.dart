@@ -358,7 +358,6 @@ class _SigninPageState extends State<SigninPage> {
                   height: 8.0,
                 ),
                 Container(
-                  alignment: Alignment(-1, 0),
                   width: 165,
                   height: 26,
                   decoration: BoxDecoration(
@@ -368,15 +367,22 @@ class _SigninPageState extends State<SigninPage> {
                     color: Colors.transparent,
                     border: Border.all(color: Colors.white),
                   ),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Pelajari Lebih Lanjut >",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14.0),
-                    ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "Pelajari Lebih Lanjut",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14.0),
+                      ),
+                      Icon(
+                        Icons.arrow_forward_ios_rounded,
+                        color: Colors.white,
+                        size: 15,
+                      )
+                    ],
                   ),
                 ),
               ],
