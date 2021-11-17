@@ -18,9 +18,15 @@ class _PortofolioState extends State<Portofolio> {
 }
 
 class _portofolioContent extends StatelessWidget {
-  // const _portofolioContent({
-  //   Key key,
-  // }) : super(key: key);
+  final items = List<ListItem>.generate(
+    1000,
+    (i) => i % 6 == 0
+        ? HeadingItem('Heading $i')
+        : MessageItem('Sender $i', 'Message body $i'),
+  );
+//  final List<ListItem> items;
+
+//   MyApp({Key key, @required this.items}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +77,8 @@ class _portofolioContent extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+            padding: EdgeInsets.only(
+                top: 10.0, bottom: 35.0, left: 10.0, right: 10.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -175,7 +182,6 @@ class _portofolioContent extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 15, bottom: 5),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -201,9 +207,181 @@ class _portofolioContent extends StatelessWidget {
                 )
               ],
             ),
-          )
+          ),
+          Container(
+            // child: ListView.builder(
+            //   // Let the ListView know how many items it needs to build.
+            //   itemCount: items.length,
+            //   // Provide a builder function. This is where the magic happens.
+            //   // Convert each item into a widget based on the type of item it is.
+            //   itemBuilder: (context, index) {
+            //     final item = items[index];
+
+            //     return ListTile(
+            //       // title: item.buildTitle(context),
+            //       // subtitle: item.buildSubtitle(context),
+            //       title: item.buildTitle(context),
+            //       subtitle: item.buildSubtitle(context),
+            //     );
+            //   },
+            // ),
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 200.0,
+                  child: new ListView(
+                    padding: const EdgeInsets.symmetric(vertical: 4.0),
+                    scrollDirection: Axis.vertical,
+                    children: <Widget>[
+                      ListTile(
+                        title: Text(
+                          "Reksadana Tetap",
+                          style: TextStyle(
+                            color: Color(0xFF82DFD7),
+                          ),
+                        ),
+                        subtitle: Text(
+                          "Sucorinvest Bond Fund",
+                          style: TextStyle(
+                            color: Color(0xFF82DFD7),
+                          ),
+                        ),
+                        trailing: Text(
+                          "Rp 500.000",
+                          style: TextStyle(
+                            color: Color(0xFF82DFD7),
+                          ),
+                        ),
+                      ),
+                      Divider(
+                        endIndent: 10,
+                        indent: 10,
+                        color: Color(0xFFC4C4C4),
+                      ),
+                      ListTile(
+                        title: Text(
+                          "Reksadana Tetap",
+                          style: TextStyle(
+                            color: Color(0xFF82DFD7),
+                          ),
+                        ),
+                        subtitle: Text(
+                          "Sucorinvest Bond Fund",
+                          style: TextStyle(
+                            color: Color(0xFF82DFD7),
+                          ),
+                        ),
+                        trailing: Text(
+                          "Rp 500.000",
+                          style: TextStyle(
+                            color: Color(0xFF82DFD7),
+                          ),
+                        ),
+                      ),
+                      Divider(
+                        endIndent: 10,
+                        indent: 10,
+                        color: Color(0xFFC4C4C4),
+                      ),
+                      ListTile(
+                        title: Text(
+                          "Reksadana Tetap",
+                          style: TextStyle(
+                            color: Color(0xFF82DFD7),
+                          ),
+                        ),
+                        subtitle: Text(
+                          "Sucorinvest Bond Fund",
+                          style: TextStyle(
+                            color: Color(0xFF82DFD7),
+                          ),
+                        ),
+                        trailing: Text(
+                          "Rp 500.000",
+                          style: TextStyle(
+                            color: Color(0xFF82DFD7),
+                          ),
+                        ),
+                      ),
+                      Divider(
+                        endIndent: 10,
+                        indent: 10,
+                        color: Color(0xFFC4C4C4),
+                      ),
+                      ListTile(
+                        title: Text(
+                          "Reksadana Tetap",
+                          style: TextStyle(
+                            color: Color(0xFF82DFD7),
+                          ),
+                        ),
+                        subtitle: Text(
+                          "Sucorinvest Bond Fund",
+                          style: TextStyle(
+                            color: Color(0xFF82DFD7),
+                          ),
+                        ),
+                        trailing: Text(
+                          "Rp 500.000",
+                          style: TextStyle(
+                            color: Color(0xFF82DFD7),
+                          ),
+                        ),
+                      ),
+                      Divider(
+                        endIndent: 10,
+                        indent: 10,
+                        color: Color(0xFFC4C4C4),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
   }
+}
+
+/// The base class for the different types of items the list can contain.
+abstract class ListItem {
+  /// The title line to show in a list item.
+  Widget buildTitle(BuildContext context);
+
+  /// The subtitle line, if any, to show in a list item.
+  Widget buildSubtitle(BuildContext context);
+}
+
+/// A ListItem that contains data to display a heading.
+class HeadingItem implements ListItem {
+  final String heading;
+
+  HeadingItem(this.heading);
+
+  @override
+  Widget buildTitle(BuildContext context) {
+    return Text(
+      heading,
+      style: Theme.of(context).textTheme.headline5,
+    );
+  }
+
+  @override
+  Widget buildSubtitle(BuildContext context) => const SizedBox.shrink();
+}
+
+/// A ListItem that contains data to display a message.
+class MessageItem implements ListItem {
+  final String sender;
+  final String body;
+
+  MessageItem(this.sender, this.body);
+
+  @override
+  Widget buildTitle(BuildContext context) => Text(sender);
+
+  @override
+  Widget buildSubtitle(BuildContext context) => Text(body);
 }
