@@ -103,7 +103,6 @@ class _SigninPageState extends State<SigninPage> {
                 Expanded(
                   child: Container(
                     margin: EdgeInsets.symmetric(vertical: 20),
-                    width: 100,
                     height: 132,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
