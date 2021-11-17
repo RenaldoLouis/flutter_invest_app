@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 class Portofolio extends StatefulWidget {
   // Portofolio({Key? key}) : super(key: key);
@@ -28,34 +29,39 @@ class _portofolioContent extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Container(
-            padding: EdgeInsets.only(left: 16, right: 16, top: 35),
+            padding: EdgeInsets.only(left: 16, right: 16, top: 55),
             child: Row(
               children: <Widget>[
-                Container(
-                  margin: EdgeInsets.only(top: 25.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        "Portofolio Page",
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      "Portofolfio!",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFFA273E0),
+                        fontSize: 28,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 10.0),
+                      child: Text(
+                        "Alokasi Dana",
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFFC4C4C4),
-                          fontSize: 14,
-                        ),
+                            color: Colors.white,
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.bold),
                       ),
-                      Align(
-                        child: Text(
-                          "Sutisna!",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xFFA273E0),
-                            fontSize: 28,
-                          ),
-                        ),
+                    ),
+                    Container(
+                      width: 50,
+                      height: 50,
+                      color: Colors.red,
+                      child: Row(
+                        children: <Widget>[],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ],
             ),

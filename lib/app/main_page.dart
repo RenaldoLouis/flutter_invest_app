@@ -39,7 +39,7 @@ class _mainPageState extends State<mainPage> {
         // fixedColor: Colors.red,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        landscapeLayout: BottomNavigationBarLandscapeLayout.linear,
+        // landscapeLayout: BottomNavigationBarLandscapeLayout.linear,
         type: BottomNavigationBarType.fixed,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
