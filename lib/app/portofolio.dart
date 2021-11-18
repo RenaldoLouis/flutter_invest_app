@@ -225,15 +225,19 @@ class _portofolioContent extends StatelessWidget {
             //     );
             //   },
             // ),
+            // decoration: BoxDecoration(
+            //     border: Border.all(width: 1, color: Colors.white)),
             child: Column(
               children: <Widget>[
-                SizedBox(
+                Container(
+                  margin: EdgeInsets.only(top: 8),
                   height: 200.0,
                   child: new ListView(
-                    padding: const EdgeInsets.symmetric(vertical: 4.0),
+                    padding: const EdgeInsets.symmetric(vertical: 10.0),
                     scrollDirection: Axis.vertical,
                     children: <Widget>[
                       ListTile(
+                        contentPadding: EdgeInsets.symmetric(horizontal: 0),
                         title: Text(
                           "Reksadana Tetap",
                           style: TextStyle(
@@ -254,11 +258,10 @@ class _portofolioContent extends StatelessWidget {
                         ),
                       ),
                       Divider(
-                        endIndent: 10,
-                        indent: 10,
                         color: Color(0xFFC4C4C4),
                       ),
                       ListTile(
+                        contentPadding: EdgeInsets.symmetric(horizontal: 0),
                         title: Text(
                           "Reksadana Tetap",
                           style: TextStyle(
@@ -279,11 +282,10 @@ class _portofolioContent extends StatelessWidget {
                         ),
                       ),
                       Divider(
-                        endIndent: 10,
-                        indent: 10,
                         color: Color(0xFFC4C4C4),
                       ),
                       ListTile(
+                        contentPadding: EdgeInsets.symmetric(horizontal: 0),
                         title: Text(
                           "Reksadana Tetap",
                           style: TextStyle(
@@ -304,11 +306,10 @@ class _portofolioContent extends StatelessWidget {
                         ),
                       ),
                       Divider(
-                        endIndent: 10,
-                        indent: 10,
                         color: Color(0xFFC4C4C4),
                       ),
                       ListTile(
+                        contentPadding: EdgeInsets.symmetric(horizontal: 0),
                         title: Text(
                           "Reksadana Tetap",
                           style: TextStyle(
@@ -329,8 +330,6 @@ class _portofolioContent extends StatelessWidget {
                         ),
                       ),
                       Divider(
-                        endIndent: 10,
-                        indent: 10,
                         color: Color(0xFFC4C4C4),
                       ),
                     ],
